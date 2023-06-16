@@ -1,0 +1,94 @@
+/* Tooltip */
+.gt-tooltip {
+  z-index: 1030;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #fff;
+  background: #575757;
+  border-radius: 4px;
+  text-align: center;
+  user-select: none;
+  font-family: malgun gothic, dotum;
+  cursor: default;
+}
+.gt-tooltip .gt-tooltip-caret {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+.gt-tooltip.gt-tooltip-show {
+  animation: aniTooltipVisible 0.1s forwards;
+}
+
+@keyframes aniTooltipVisible {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.gt-tooltip.gt-tooltip-hide {
+  animation: aniTooltipIvisible 0.1s forwards;
+}
+
+@keyframes aniTooltipIvisible {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+/* Animate(zoom) */
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Transform-Origin */
+.gt-transform-origin-top-center {
+  transform-origin: 50% 0;
+}
+
+.gt-transform-origin-bottom-center {
+  transform-origin: 50% 100%;
+}
+
+.gt-transform-origin-center-right {
+  transform-origin: 100% 50%;
+}
+
+.gt-transform-origin-center-left {
+  transform-origin: 0 50%;
+}
+
+.gt-transform-origin-bottom-left {
+  transform-origin: 0 100%;
+}
+
+.gt-transform-origin-bottom-right {
+  transform-origin: 100% 100%;
+}
+
+.gt-transform-origin-top-left {
+  transform-origin: 0 0;
+}
+
+.gt-transform-origin-top-right {
+  transform-origin: 100% 0;
+}

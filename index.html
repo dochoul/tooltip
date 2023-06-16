@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link rel="stylesheet" href="tooltip.css">
+</head>
+<body>
+  <div style="display: flex; gap: 5px; justify-content: center; align-items: center; height: 100vh;">
+    <button data-tooltip="안녕하세요" id="dochoul">Hover</button>
+    <button data-tooltip="안녕하세요<br>안녕하세요<br>안녕하세요" data-tooltip-placement="left">Left</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="top">Top</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="bottom">Bottom</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="right">Right</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="top-left">Top Left 😀😀😀😀😀</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="top-right">Top Right 🥰🥰🥰🥰🥰</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="bottom-left">Bottom Left 😅😅😅😅😅</button>
+    <button data-tooltip="안녕하세요" data-tooltip-placement="bottom-right">Bottom Right 😛😛😛😛😛</button>
+    <button data-tooltip="안녕하세요" data-tooltip-background="red">툴팁 배경색 변경</button>
+    <button data-tooltip="안녕하세요" data-tooltip-color="aquamarine">툴팁 폰트 컬러 변경</button>
+    <button data-tooltip="안녕하세요<br>하하하" data-tooltip-fontSize="1.2em">툴팁 폰트 크기 변경</button>
+  </div>
+  <script type="module">
+    import Tooltip from "./scripts/tooltip.js";
+    const ttBtn = new Tooltip(document.querySelectorAll('[data-tooltip]'))
+    ttBtn.init();
+  </script>
+</body>
+</html>
